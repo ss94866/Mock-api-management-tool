@@ -25,6 +25,7 @@ export default function Projects() {
     <div>
       <CCard style={initalStyle}>
       {
+        projects.length !== 0 ? 
         projects.map((project, index) => {
           return (
             <div key={index}>
@@ -33,7 +34,8 @@ export default function Projects() {
               {project.projectDescription}
             </div>
           )
-        })
+        }):
+        <div>No records found</div>
       }
     </CCard>
     </div>
