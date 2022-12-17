@@ -3,13 +3,16 @@ const app = express()
 
 const jwt = require('jsonwebtoken');
 const bodyParser = require('body-parser');
+const cors = require('cors')
+
 app.use(bodyParser.urlencoded({ extended: true })); 
 app.use(bodyParser.json());
+app.use(cors())
 require('dotenv').config()
 const connectDb = require('./config/db')
 const data = require('./assets/data.json')
 
-let conn = connectDb()
+// let conn = connectDb()
 
 const posts = [
     {
