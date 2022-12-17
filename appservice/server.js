@@ -7,6 +7,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 require('dotenv').config()
 const connectDb = require('./config/db')
+const data = require('./assets/data.json')
 
 let conn = connectDb()
 
@@ -20,6 +21,11 @@ const posts = [
 app.get('/',authenticateToken, (req,res) => { 
     console.log(req.user);
     res.json(posts)
+})
+
+app.get('/projects', (req, res) => {
+    const userId = req.query.userId
+    res.status(200).send(data.projects)
 })
 
 function authenticateToken(req, res, next) {
