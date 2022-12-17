@@ -39,3 +39,8 @@ Content-Length: application/json
 {
     "refreshToken" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoic2l2YSIsImlhdCI6MTY2OTIwMDMzNn0.pfo3Nsyfu9mszDl7_KhOm2aPa0ujSiY5X0RiK1rqjLo"
 }
+
+###
+
+GET http://localhost:4000/projects?userId=1 HTTP/1.1
+Content-Type: application/json
