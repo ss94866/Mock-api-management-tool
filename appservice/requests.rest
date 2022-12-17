@@ -1,0 +1,41 @@
+POST http://localhost:5000/createUser
+Content-Type: application/json
+
+{
+    "username" : "sivasan",
+    "password" : "password"  
+}
+
+###
+
+post http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "username": "sivas",
+    "password": "password"
+}
+
+###
+
+post http://localhost:5000/token
+Content-Type: application/json
+
+{
+    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzgxZGQwYmNjNzVlMmY4MzJmN2U5NWYiLCJuYW1lIjoic2l2YXMiLCJpYXQiOjE2Njk1MTYyODR9.d1_T3mjCoEoKJPQj7TFC0dNW6umQoR6hTqXrgo_cuho",
+    "userId": "6381dd0bcc75e2f832f7e95f"
+}
+
+###
+
+get http://localhost:4000/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoic2l2YSIsImlhdCI6MTY2OTQ0NjQ1OCwiZXhwIjoxNjY5NDQ3MDU4fQ.RsWshPZMd3stFdkpTsaQZ2CkiqY5K6vRTguXae2X8gY
+
+###
+
+DELETE http://localhost:5000/logout
+Content-Length: application/json
+
+{
+    "refreshToken" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoic2l2YSIsImlhdCI6MTY2OTIwMDMzNn0.pfo3Nsyfu9mszDl7_KhOm2aPa0ujSiY5X0RiK1rqjLo"
+}

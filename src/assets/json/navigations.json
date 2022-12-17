@@ -1,0 +1,34 @@
+{
+  "appName": "Mock api management tool",
+  "cmpyName": "Hexaware",
+  "cmpyLogo": "",
+  "topNav": false,
+  "sideNav": true,
+  "navbarData": [
+    {
+      "menuName": "Projects",
+      "routePath": "Projects",
+      "parentMenu": "",
+      "reference": "Projects",
+      "functionality": "Default",
+      "items": []
+    },
+    {
+      "menuName": "MockServer",
+      "routePath": "MockServer",
+      "parentMenu": "",
+      "reference": "MockServer",
+      "functionality": "Default",
+      "items": []
+    },
+    {
+      "menuName": "ApiScore",
+      "routePath": "ApiScore",
+      "parentMenu": "",
+      "reference": "ApiScore",
+      "functionality": "Default",
+      "items": []
+    }
+  ],
+  "cmpyWebLink": "https://hexaware.com/"
+}
