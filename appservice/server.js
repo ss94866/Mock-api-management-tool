@@ -9,7 +9,7 @@ require('dotenv').config()
 const connectDb = require('./config/db')
 const data = require('./assets/data.json')
 
-let conn = connectDb()
+// let conn = connectDb()
 
 const posts = [
     {
