@@ -10,15 +10,11 @@ let initalStyle = {
   fontWeight: "bold",
 }
 
-class Projects extends Component {
-    
-  render() {
-    return (
-      <CCard style={initalStyle}>
+
+export default function Projects() {
+  return (
+    <CCard style={initalStyle}>
       Projects works
     </CCard>
-    )
-  }
+  )
 }
-
-export default Projects
