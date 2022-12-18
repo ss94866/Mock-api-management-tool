@@ -3,11 +3,15 @@ const app = express()
 
 const jwt = require('jsonwebtoken');
 const bodyParser = require('body-parser');
+const cors = require('cors')
+const projectRoute = require('./routes/projects')
+
 app.use(bodyParser.urlencoded({ extended: true })); 
 app.use(bodyParser.json());
+app.use(cors())
+app.use('/projects', projectRoute)
 require('dotenv').config()
 const connectDb = require('./config/db')
-const data = require('./assets/data.json')
 
 // let conn = connectDb()
 
@@ -21,11 +25,6 @@ const posts = [
 app.get('/',authenticateToken, (req,res) => { 
     console.log(req.user);
     res.json(posts)
-})
-
-app.get('/projects', (req, res) => {
-    const userId = req.query.userId
-    res.status(200).send(data.projects)
 })
 
 function authenticateToken(req, res, next) {

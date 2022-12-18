@@ -3,5 +3,8 @@
         {"projectId": 1, "projectName":"demoProject1", "projectDescription": ""},
         {"projectId": 2, "projectName":"demoProject2", "projectDescription": ""},
         {"projectId": 3, "projectName":"demoProject3", "projectDescription": ""}
+    ],
+    "modules":[
+        {"moduleId": 1, "moduleName":"demoModule", "moduleDescription": ""}
     ]
 }
